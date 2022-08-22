@@ -1,0 +1,9 @@
+<h1>hello</h1>
+<%= @list.name %>
+<%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.association :movie, as: :select %>
+  <%= f.input :comment %>
+  <%= f.submit "Submit" %>
+<% end %>
+
+<p><%= link_to "Homepage", lists_path%></p>
